@@ -111,5 +111,5 @@
 }
 
 .shake {
-    animation: shake 0.5s;
+    animation: shake .5s;
 }
