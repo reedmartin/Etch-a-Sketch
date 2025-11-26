@@ -1,0 +1,115 @@
+.title h1, .title h2 {
+    text-align: center;
+    margin: 1px;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    width: 800px;
+    height: 800px;
+    flex-wrap: wrap;
+    box-sizing: content-box;
+    border: 100px solid rgb(172, 25, 25);
+    border-radius: 30px;
+    background-color: rgb(180, 181, 178);
+    position: relative;
+    overflow: visible;
+}
+
+.etch-title {
+    color: white;
+    top: -52px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: cursive;
+}
+
+.inputButton, .clearButton {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    padding: 12px 24px;
+    background-color: rgb(172, 25, 25);
+    /* Match the red border */
+    border: 3px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.inputButton:hover, .clearButton:hover {
+    background-color: rgb(200, 40, 40);
+    /* Lighter red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.inputArea {
+    text-align: center;
+    padding: 20px;
+}
+
+#left-dial {
+    position: absolute;
+    bottom: -20px;
+    /* Push down into the border area */
+    left: -20px;
+    /* Push left into the border area */
+    height: 160px;
+    width: 160px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border: 10px solid black;
+}
+
+#right-dial {
+    position: absolute;
+    bottom: -20px;
+    /* Push down into the border area */
+    right: -20px;
+    /* Push left into the border area */
+    height: 160px;
+    width: 160px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    border: 10px solid black;
+}
+
+.etch-wrapper {
+    position: relative;
+    margin: 0 auto;
+    width: 1000px;
+    /* Container width + borders */
+}
+
+.dial-indicator-left {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    bottom: -16px;
+    left: 36px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+
+.dial-indicator-right {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    bottom: -16px;
+    right: -36px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
